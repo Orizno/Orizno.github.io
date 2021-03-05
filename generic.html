@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>NTIC RL-MARL</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,11 +15,11 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" class="fade-in">
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">Reinforcement Learning</a>
 					</header>
 
 				<!-- Nav -->
@@ -36,20 +36,28 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
-							<section class="post">
+						<!-- Featured Post -->
+							<article class="post featured">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h2><a href="#">Multi-agent<br />
+									Reinforcement Learning</a></h2>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
+								<p> <a href="#" class="image main"><img src="https://miro.medium.com/max/3000/1*PqoJzG3aX9MXAd_cxf2OTQ.png" alt="Principe du MARL" /></a>
+								Source image : <a href="https://medium.com/@RemiStudios/multi-agent-reinforcement-learning-3f00b561f5f0">medium.com</a></p>
+								
+								<p>Le principe du Reinforcement Learning présenté au dessus est celui du Reinforcement Learning avec un seul agent qui interagit avec l’environnement. Cela peut être utile dans certaines situations (par exemple, si on veut résoudre un labyrinthe par Reinforcement Learning, on n’a besoin que d’un seul agent), mais dans de nombreux cas, on veut pouvoir apprendre plusieurs agents différents, qui peuvent collaborer ou être en compétition, selon l’application. C’est beaucoup plus compliqué que du Reinforcement Learning à un seul agent, puisque tous les agents interagissent simultanément avec l’environnement, ce qui fait qu’en plus de devoir tenir compte de leur état et de l’environnement, ils doivent aussi pour être efficace en quelque sorte anticiper les actions des autres agents.</p>
+								<p>Une autre problématique importante du Multi-agent Reinforcement Learning est la sécurité. Un certain nombre d’applications du Multi-agent Reinforcement Learning sont safety-critical, c’est-à-dire qu’il y a certains états que ne peuvent pas prendre les agents les uns envers les autres sous peine de conséquences graves. Par exemple, dans le cas des voitures autonomes, si on considère chaque voiture comme un agent, il ne faut pas qu’elles se retrouvent au même endroit au même moment, sinon il y aura un accident. C’est donc quelque chose de très important d’être sûr que ces états non sûrs ne seront jamais pris par les agents, dans l’apprentissage comme durant les tests. Les deux publications que j’ai lue sur ce sujet cherchaient donc à résoudre ce problème, de deux manières différentes..</p>
+								
+								<p><a href="#" class="image main"><img src="http://opendeeptech.com/wp-content/uploads/2018/02/d34887ec89_107368_alphago-kejie-678x381.jpg" alt="AlphaGo" /></a>
+								Source image : <a href="http://opendeeptech.com/fr/alphago-lintelligence-artificielle-de-google">opendeeptech.com</a></p>
+
+								<p>L’autre manière est plus abstraite, je n’ai pas encore vraiment recherché pour l’instant à essayer de la comprendre, mais dans les deux cas, cela permet d’éviter les états non safe dans le Multi-agent Reinforcement Learning, donc cela peut être une belle avancée dans le domaine du Reinforcement Learning, par exemple dans les domaines de la voiture autonome et de la robotique.</p>
+								
+								<h3>Bibliographie</h3>
+								<p>[1]</p>
+								
+							</article>
+
 
 					</div>
 

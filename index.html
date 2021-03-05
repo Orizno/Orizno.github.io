@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>NTIC RL</title>
+		<title>NTIC RL - Définition</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -58,10 +58,11 @@
 								<p>Le Reinforcement Learning ou apprentissage par renforcement est une méthode d’apprentissage automatique consistant en un agent placé au sein d’un environnement avec un objectif. A chaque étape de l’exécution, l’agent réalise une action, qui est choisie selon l’environnement et l’état actuel de l’agent, ce qui lui permet d’interagir avec l’environnement, qui lui renvoie son nouvel état, ainsi qu’un reward, qui peut être positif ou négatif (Figure 1). L’agent a donc pour objectif de maximiser la somme des rewards. Pour illustrer cela par un exemple, si on prend la résolution d’un labyrinthe par RL, l’environnement est le labyrinthe, l’agent la personne qui essaye d’en sortir, les actions sont les déplacements de l’agent, et les rewards sont par exemple négatifs à chaque déplacement, et positif lorsque l’agent atteint la sortie. </p>
 								<p>Le RL suit donc un système de trial and error, qui est proche de l’apprentissage traditionnel chez les humains.</p>
 								
-								<p><a href="#" class="image main"><img src="http://opendeeptech.com/wp-content/uploads/2018/02/d34887ec89_107368_alphago-kejie-678x381.jpg" alt="AlphaGo" /></a>
-								Source image : <a href="http://opendeeptech.com/wp-content/uploads/2018/02/d34887ec89_107368_alphago-kejie-678x381.jpg">opendeeptech.com</a></p>
+								<p><a href="#" class="image main"><img src="https://i.imgur.com/hc8OybM.png" alt="Shielding" /></a>
+								Source image : <a href="https://arxiv.org/pdf/2101.11196v1.pdf">Safe Multi-Agent Reinforcement Learning via Shielding</a></p>
 
-								<p>Depuis quelques années, le RL a été très médiatisé, grâce notamment à des performances comme celles d’Alpha Go (Figure 2), réalisé par une filiale de Google, et qui a battu le champion du monde du jeu de Go en 2017, et c’est donc un champ de recherche assez important, où il y a régulièrement des innovations ou des nouvelles applications, et ce site va vous en présenter quelques unes.</p>
+								<p>Je ne vais pas rentrer dans les détails, mais globalement pour l’une des deux manières, ils rajoutent un bouclier entre les agents et l’environnement, qui vérifie que les actions vérifient bien les critères de sécurité, qui sont précisé à l’avance, et si ce n’est pas le cas, il modifie l’action non safe, et renvoie une récompense négative à l’agent ayant essayé de la réaliser, pour qu’il apprenne à ne plus faire d’action non safe.</p>
+								<p>Je ne vais pas rentrer dans les détails, mais globalement pour l’une des deux manières, ils rajoutent un bouclier entre les agents et l’environnement, qui vérifie que les actions vérifient bien les critères de sécurité, qui sont précisé à l’avance, et si ce n’est pas le cas, il modifie l’action non safe, et renvoie une récompense négative à l’agent ayant essayé de la réaliser, pour qu’il apprenne à ne plus faire d’action non safe.</p>
 								
 								<h3>Bibliographie</h3>
 								<p>[1]</p>
