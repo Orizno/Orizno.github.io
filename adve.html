@@ -42,18 +42,19 @@
 								<header class="major">
 									<h2><a href="#">Adversarial attacks</a></h2>
 								</header>
-								<p>Un des problèmes du Reinforcement Learning est qu'il n'est pas forcément robuste à des légères modifications dans l'environnement : ces modifications, même si elles semblent mineures pour un humain, peuvent avoir des grandes conséquences, notamment dans des situations safety-critical.</p>
-								<p>Ces modifications sont appelées des "adversarial attacks", ce ne sont pas forcément des attaques au premier sens du terme (du hacking), mais cela peut seulement être un problème de caméra ou de capteurs, qui donnent des valeurs ou des extraits de valeurs différents par rapport à d'habitude (par exemple si les pixels de l'image prise par la caméra sont décalés légèrement par rapport à d'habitude)..</p>
+								<p>Un des problèmes du Reinforcement Learning est qu'il n'est pas forcément robuste à des légères modifications dans l'environnement [1] : ces modifications, même si elles semblent mineures pour un humain, peuvent avoir des grandes conséquences, notamment dans des situations safety-critical.</p>
+								<p>Ces modifications sont appelées des "adversarial attacks", ce ne sont pas forcément des attaques au premier sens du terme (du hacking), mais cela peut seulement être un problème de caméra ou de capteurs, qui donnent des valeurs ou des extraits de valeurs différents par rapport à d'habitude (par exemple si les pixels de l'image prise par la caméra sont décalés légèrement par rapport à d'habitude). Elles sont donc très courantes dans la vie réelle, et il est donc important que les algorithmes soient robustes à celles-ci.</p>
 								
 								<p><a href="#" class="image main"><img src="https://news.mit.edu/sites/default/files/images/inline/adversarial-learning.gif" alt="Effets d'une adversarial attack sur Pong" /></a>
 								Source image : <a href="https://news.mit.edu/2021/artificial-intelligence-adversarial-0308">Algorithm helps artificial intelligence systems dodge “adversarial” inputs, MIT News</a></p>
 								
 								<p>Un exemple concret est dans le Gif si dessus : un DQN (un type d’algorithme de Reinforcement Learning) est entraîné pour jouer à Pong. On voit que dans le cas sans attaque, l’agent de Reinforcement Learning gagne facilement sa partie. Mais les chercheurs ont ensuite rajouté une adversarial attack : la balle est détectée un peu plus basse qu’elle n’est en réalité : on voit que l’algorithme n’est pas du tout robuste à cette attaque, et l’agent perd largement le match.</p>
 								<p>Il est donc important de réussir à rendre l’algorithme plus robuste, et c’est ce qui est réalisé pour la troisième partie du GIF, avec l’algorithme CARRL : son principe, appliqué au Pong, est, durant l’entraînement, de ne plus considérer que la balle est forcément à l’endroit indiqué, mais qu’elle peut être dans une petite région autour de cet endroit, et qu’il faut donc choisir l’action qui maximise le reward dans le pire des cas.</p>
-								<p>D’autres chercheurs étudient non plus les adversarial attacks sur l’environnement, mais sur le reward, pour connaître les effets de légères modifications du reward sur le comportement de l’agent, pour savoir quels types d’algorithmes sont plus robustes face à ce type d’attaque..</p>
+								<p>D’autres chercheurs étudient non plus les adversarial attacks sur l’environnement, mais sur le reward [2], pour connaître les effets de légères modifications du reward sur le comportement de l’agent, pour savoir quels types d’algorithmes sont plus robustes face à ce type d’attaque..</p>
 								
 								<h3>Bibliographie</h3>
-								<p>[1]</p>
+								<p>[1] Jennifer Chu (MIT News), <i>Algorithm helps artificial intelligence systems dodge “adversarial” inputs</i>, disponible sur <a href="https://news.mit.edu/2021/artificial-intelligence-adversarial-0308">news.mit.edu</a></p>
+								<p>[2] Majadas, Garcia et Fernandez, <i>Disturbing Reinforcement Learning Agents with Corrupted Rewards</i>, disponible sur <a href="https://arxiv.org/pdf/2102.06587v1.pdf">arxiv.org</a></p>
 								
 							</article>
 
