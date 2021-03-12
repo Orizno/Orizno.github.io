@@ -42,17 +42,18 @@
 								<header class="major">
 									<h2><a href="#">Meta-Learning</a></h2>
 								</header>
-								<p>Une autre innovation dans le domaine du Reinforcement Learning est le meta-learning d’algorithmes de Reinforcement Learning. La manière classique de réaliser l’apprentissage d’un algorithme de RL, c’est de choisir un type d’algorithme de Reinforcement Learning (par exemple QLearning, DeepQLearning ou Gradient Policy), puis de choisir les hyperparamètres, puis de tester, puis de changer les hyperparamètres pour que cela marche mieux, etc. jusqu’à tomber sur une solution satisfaisante, ce qui peut être long, et ne garantit pas forcément d’obtenir un résultat concluant à la fin..</p>
+								<p>Une autre innovation dans le domaine du Reinforcement Learning est le meta-learning d’algorithmes de Reinforcement Learning [1]. La manière classique de réaliser l’apprentissage d’un algorithme de RL, c’est de choisir un type d’algorithme de Reinforcement Learning (par exemple QLearning, DeepQLearning ou Gradient Policy), puis de choisir les hyperparamètres, puis de tester, puis de changer les hyperparamètres pour que cela marche mieux, etc. jusqu’à tomber sur une solution satisfaisante, ce qui peut être long, et ne garantit pas forcément d’obtenir un résultat concluant à la fin.</p>
 
 								<p> <a href="#" class="image main"><img src="https://i.imgur.com/dzAIt7H.png" alt="Meta-learning" /></a>
 								Source image : <a href="https://arxiv.org/abs/2101.03958">Evolving Reinforcement Learning Algorithms</a></p>
 								
-								<p>Des chercheurs de chez Google ont récemment publié un article sur un méta-apprentissage d’algorithmes de Reinforcement Learning, ce qui pourrait éviter ces problèmes. Globalement, on part d’un certain nombre d’algorithmes de Reinforcement Learning, aléatoires ou connus, on les entraîne sur différents environnements d’entraînement, ce qui permet d’obtenir une fonction de perte (qui est généralisée). On réalise ensuite une mutation sur chacun des algorithmes, on les réentraîne, on recalcule la fonction de perte, etc.. Finalement, après n itérations, on sélectionne l’algorithme qui fonctionne le mieux sur l’ensemble des environnements d’apprentissage. Lors de la phase de test, ils ont ensuite testé l’algorithme sur d’autres environnements, et cela a donné des bons résultats, donc l’algorithme trouvé est bien généralisable.</p>
+								<p>Des chercheurs de chez Google ont récemment publié un article sur un méta-apprentissage d’algorithmes de Reinforcement Learning [2], ce qui pourrait éviter ces problèmes. Globalement, on part d’un certain nombre d’algorithmes de Reinforcement Learning, aléatoires ou connus, on les entraîne sur différents environnements d’entraînement, ce qui permet d’obtenir une fonction de perte (qui est généralisée). On réalise ensuite une mutation sur chacun des algorithmes, on les réentraîne, on recalcule la fonction de perte, etc.. Finalement, après n itérations, on sélectionne l’algorithme qui fonctionne le mieux sur l’ensemble des environnements d’apprentissage. Lors de la phase de test, ils ont ensuite testé l’algorithme sur d’autres environnements, et cela a donné des bons résultats, donc l’algorithme trouvé est bien généralisable.</p>
 								
 								<p>Un problème est évidemment le temps de calcul, vu que cela a duré 72h en utilisant plus de 300 CPUs, donc même si le principe est intéressant et une grosse avancée, il semble pour l’instant compliqué à mettre en œuvre.</p>
 								
 								<h3>Bibliographie</h3>
-								<p>[1]</p>
+								<p>[1] Ram Sagar (analyticsindiamag.com), <i>What Are Evolving Reinforcement Learning Algorithms</i>, disponible sur <a href="https://analyticsindiamag.com/what-are-evolving-reinforcement-learning-algorithms/">analyticsindiamag.com</a></p>
+								<p>[2] Co-Reyes, Miao, Peng, Real, Levine, Le, Lee et  Faust, <i>Evolving Reinforcement Learning Algorithms</i>, disponible sur <a href="https://arxiv.org/pdf/2101.03958.pdf">arxiv.org</a></p>
 								
 							</article>
 
