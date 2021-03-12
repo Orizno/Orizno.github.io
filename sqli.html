@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>NTIC RL - SQLi</title>
+		<title>NTIC Reinforcement Learning - SQLi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,8 +25,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html">Définition RL</a></li>
-							<li><a href="marl.html">Multi-agent RL</a></li>
+							<li><a href="index.html">Définition Reinforcement Learning</a></li>
+							<li><a href="marl.html">Multi-agent Reinforcement Learning</a></li>
 							<li><a href="adve.html">Adversarial attacks</a></li>
 							<li><a href="meta.html">Meta-learning</a></li>
 							<li class="active"><a href="sqli.html">Injections SQL</a></li>
@@ -43,9 +43,9 @@
 									<h2><a href="#">Injections SQL et<br />
 									Reinforcement Learning</a></h2>
 								</header>
-								<p>Le Reinforcement Learning peut permettre de lutter contre les injections SQL en les simulant via un algorithme de RL. Commençons par présenter rapidement les injections SQL : il s’agit d’une méthode d’exploitation de failles de sécurité dans un système avec une base de données, qui permet à l’attaquant, via des requêtes SQL non prévues par le système, d’accéder à des données qu’il n’est pas censé pouvoir voir, voire modifier ou supprimer des données.</p>
+								<p>Le Reinforcement Learning peut permettre de lutter contre les injections SQL en les simulant via un algorithme de Reinforcement Learning. Commençons par présenter rapidement les injections SQL : il s’agit d’une méthode d’exploitation de failles de sécurité dans un système avec une base de données, qui permet à l’attaquant, via des requêtes SQL non prévues par le système, d’accéder à des données qu’il n’est pas censé pouvoir voir, voire modifier ou supprimer des données [1].</p>
 								
-								<p>Voici un exemple simple d’injection SQL, tirée de Wikipédia : dans le cas où, pour un système d’identification, le code fait simplement une requête SQL avec le nom et le mot de passe (haché en MD5) pour vérifier si l’utilisateur a le droit de se connecter ou non :</p>
+								<p>Voici un exemple simple d’injection SQL, tirée de Wikipédia [1] : dans le cas où, pour un système d’identification, le code fait simplement une requête SQL avec le nom et le mot de passe (haché en MD5) pour vérifier si l’utilisateur a le droit de se connecter ou non :</p>
 
 								<p><b>Nom :</b> Dupont <b>MDP :</b> truc</p>
 
@@ -60,13 +60,15 @@
 								<p>SELECT uid FROM Users WHERE name = 'Dupont’;</p>
 
 								
-								<p>Evidemment, ce n’est qu’un exemple simple d’injection SQL, il en existe de beaucoup plus compliqué, et c’est justement là où intervient le RL. L’objectif est de simuler des injections SQL via RL : le problème est modélisé comme un problème de Capture The flag : l’agent envoie des requêtes SQL à l’application (qui sont donc ses actions) avec comme objectif d’obtenir un certain résultat, qui est le drapeau à capturer en quelque sorte. La fonction de reward est donc positive si l’agent réussit son injection SQL, et négative sinon. En utilisant des algorithmes classiques de RL (Qlearning et Deep QLearning), les chercheurs ont réussi à obtenir des résultats concluants lors de leurs tests, avec l’algorithme qui réussit assez rapidement à trouver l’injection SQL pour récupérer la donnée souhaitée.</p>
+								<p>Evidemment, ce n’est qu’un exemple simple d’injection SQL, il en existe de beaucoup plus compliqué, et c’est justement là où intervient le Reinforcement Learning. L’objectif est de simuler des injections SQL via Reinforcement Learning [2][3]: le problème est modélisé comme un problème de Capture The flag : l’agent envoie des requêtes SQL à l’application (qui sont donc ses actions) avec comme objectif d’obtenir un certain résultat, qui est le drapeau à capturer en quelque sorte. La fonction de reward est donc positive si l’agent réussit son injection SQL, et négative sinon. En utilisant des algorithmes classiques de Reinforcement Learning (Qlearning et Deep QLearning), les chercheurs ont réussi à obtenir des résultats concluants lors de leurs tests, avec l’algorithme qui réussit assez rapidement à trouver l’injection SQL pour récupérer la donnée souhaitée.</p>
 								
 								<p>Ce n’est que le début de leurs recherches sur le sujet, et donc il y a quelques limitations pour l’instant : par exemple, les tests ont été réalisés dans un environnement statique, qui ne réagit pas aux attaques de l’algorithme, ce qui n’est pas forcément le cas pour des applications réelles. De plus, l’algorithme a été utilisé dans un cas où il y avait une vulnérabilité aux injections SQL, et l’algorithme avait donc juste à trouver quelle requête pouvait l’exploiter.</p>
-								<p>Dans tous les cas, si les chercheurs réussissent à généraliser l’algorithme, ce sera une avancée dans le domaine de la cybersécurité, en plus du domaine du RL.</p>
+								<p>Dans tous les cas, si les chercheurs réussissent à généraliser l’algorithme, ce sera une avancée dans le domaine de la cybersécurité, en plus du domaine du Reinforcement Learning.</p>
 								
 								<h3>Bibliographie</h3>
-								<p>[1]</p>
+								<p>[1] Wikipedia.org, <i>Injection SQL</i>, disponible sur <a href="https://fr.wikipedia.org/wiki/Injection_SQL">wikipedia.org</a></p>
+								<p>[2] Ben Dickson (The daily Swig), <i>Machine learning offers fresh approach to tackling SQL injection vulnerabilities</i>, disponible sur <a href="https://portswigger.net/daily-swig/machine-learning-offers-fresh-approach-to-tackling-sql-injection-vulnerabilities">portswigger.net</a></p>
+								<p>[3] Erdodi, Sommervoll et Zennaro, <i>Simulating SQL Injection Vulnerability Exploitation Using Q-Learning Reinforcement Learning Agents</i>, disponible sur <a href="https://arxiv.org/pdf/2101.03118.pdf">arxiv.org</a></p>
 								
 							</article>
 
